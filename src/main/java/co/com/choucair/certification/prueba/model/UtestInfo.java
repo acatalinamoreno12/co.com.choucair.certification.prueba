@@ -7,7 +7,6 @@ public class UtestInfo {
     private String strMesNacimiento;
     private String strDiaNacimiento;
     private String strAnoNacimiento;
-
     private String strCiudad;
 
     private String strCodigoPostal;

@@ -18,7 +18,7 @@ public class PaginaInformacionPersonal {
             .located(By.id("birthDay"));
     public static final Target ANO_NACIMIENTO  = Target.the("Año de nacimiento de usuario")
             .located(By.id("birthYear"));
-    public static final Target BOTON_NEXT = Target.the("Botón para continuar con el formulario")
+    public static final Target BOTON_NEXT = Target.the("Boton para continuar con el formulario")
             .located(By.xpath("//a[@class= 'btn btn-blue']"));
 
 }

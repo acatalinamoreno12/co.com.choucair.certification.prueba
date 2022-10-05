@@ -17,6 +17,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActor;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class PruebaStepDefinitions {
+     private List<UtestInfo> datos;
 
     @Before
     public void setStage(){
@@ -28,15 +29,14 @@ public class PruebaStepDefinitions {
        theActor("Angie").wasAbleTo(AbrirPagina.laPagina());
     }
 
-    @When("^El usuario ingresa la información solicitada en la página para su correcto registro$")
+    @When("^El usuario ingresa la información solicitada en la pagina para su correcto registro$")
     public void elUsuarioIngresaLaInformacionSolicitadaEnLaPaginaParaSuCorrectoRegistro(List<UtestInfo> datos) throws Exception {
         theActorInTheSpotlight().attemptsTo(CompletarInformacionPersonal.laPagina(datos), CompletarInformacionDireccion.laPagina(datos),
-                CompletarInformacionDispositivo.laPagina(datos), CompletarPaginaFinal.laPagina(datos)
-        );
+                CompletarInformacionDispositivo.laPagina(datos), CompletarPaginaFinal.laPagina(datos));
     }
 
     @Then("^El registro es exitoso cuando aparece el botón Configuración Completa\\.$")
-    public void elRegistroEsExitosoCuandoApareceElBotonConfiguracionCompleta(List<UtestInfo> datos) {
+    public void elRegistroEsExitosoCuandoApareceElBotonConfiguracionCompleta(List<UtestInfo> datos)  throws Exception {
         theActorInTheSpotlight().should(GivenWhenThen.seeThat(Responder.lOs(datos)));
 
     }

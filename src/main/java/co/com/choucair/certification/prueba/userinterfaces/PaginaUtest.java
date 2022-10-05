@@ -9,6 +9,6 @@ import net.serenitybdd.screenplay.targets.Target;
 @DefaultUrl("https://www.utest.com/")
 public class PaginaUtest extends PageObject {
 
-    public static final Target JOIN = Target.the("Botón para ingresar al fomulario de Registro de Usuario")
+    public static final Target JOIN = Target.the("Boton para ingresar al fomulario de Registro de Usuario")
             .located(By.xpath("//a[@class= 'unauthenticated-nav-bar__sign-up']"));
 }
